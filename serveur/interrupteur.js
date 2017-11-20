@@ -19,7 +19,8 @@ router.get('/:piece/:etat', function(req, res, next) {
 		  console.log(result);
 	  	wemoSwitch.getBinaryState(function(err, result) {
 	    		if (err) console.error(err);
-	    		console.log(result);
+					console.log(result);
+					res.redirect('/');
 		   });
 	   });
 	});
